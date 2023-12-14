@@ -1,25 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import {  HashRouter as Router, Route, Routes ,BrowserRouter} from 'react-router-dom'
+import HomePage from './scenes/HomePage'
+import UserPage from './scenes/UserPage'
+import QrPage from './scenes/QrPage'
 
-function App() {
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <BrowserRouter>
+        <Routes>
+          <Route path='/' element = { <HomePage/>} />
+          <Route path='/user' element = { <UserPage/>} />
+          <Route path='/qr' element = { <QrPage/>} />
+        </Routes>
+      </BrowserRouter>      
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
