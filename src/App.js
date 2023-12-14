@@ -8,13 +8,13 @@ import QrPage from './scenes/QrPage'
 const App = () => {
   return (
     <div>
-      <BrowserRouter>
+      <Router>
         <Routes>
           <Route path='/' element = { <HomePage/>} />
           <Route path='/user' element = { <UserPage/>} />
           <Route path='/qr' element = { <QrPage/>} />
         </Routes>
-      </BrowserRouter>      
+      </Router>      
     </div>
   )
 }
